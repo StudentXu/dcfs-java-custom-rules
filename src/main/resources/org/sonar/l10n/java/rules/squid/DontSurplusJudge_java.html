@@ -1,0 +1,12 @@
+<p>多余的contains判断</p>
+<h2>Code Example</h2>
+<pre>
+多余的contains判断
+String global_id_type_f=data.contains("GLOBAL_ID_TYPE_F")?data.getField("GLOBAL_ID_TYPE_F").strValue():"";
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+推荐使用方式
+Field gField = data.getField("GLOBAL_ID_TYPE_F");
+String global_id_type_f = gField == null? "":gField.strValue();
+</pre>

@@ -1,0 +1,14 @@
+<p>违规使用平台内部的执行缓存</p>
+<h2>Code Example</h2>
+<pre>
+违规使用平台内部的执行缓存
+例1
+Map<String,Object> map = (Map<String,Object>)GlobalCache.getInstance().getCacheData();
+例2
+GlobalCache.getInstance().setCacheData(map);
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+推荐使用方式：
+不允许使用GlobalCache
+</pre>

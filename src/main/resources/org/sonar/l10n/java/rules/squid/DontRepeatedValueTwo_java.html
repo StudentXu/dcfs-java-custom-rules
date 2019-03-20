@@ -1,0 +1,17 @@
+<p>重复取值2</p>
+<h2>Code Example</h2>
+<pre>
+重复取值2
+if(data.getStruct("TRAN_AMT1").contains("amt")&&!"".equals(data.getStruct("TRAN_AMT1").getField("amt").strValue())){
+}
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+推荐使用方式：
+CompositeData amtStruct = data.getStruct("TRAN_AMT1");
+if (amtStruct != null) {
+	Field amtField = amtStruct.getField("amt");
+	if (amtField!=null&&!"".equals(amtField.strValue())) {
+	}
+}
+</pre>

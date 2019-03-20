@@ -1,0 +1,107 @@
+<p>口行定制规则与galaxy定制相似，对 interface以及 interface 中的所有方法，abstract class 中的
+	abstract 方法进行强制注释校验，对比galaxy规则增加@author要求</p>
+
+<p>The following Javadoc elements are required:</p>
+<ul>
+  <li> author, using <code>@author name</code>. </li>
+  <li> Parameters, using <code>@param parameterName</code>. </li>
+  <li> Method return values, using <code>@return</code>. </li>
+  <li> Generic types, using <code>@param &lt;T&gt;</code>. </li>
+</ul>
+<p>The following public methods and constructors are not taken into account by this rule:</p>
+<ul>
+  <li> Getters and setters. </li>
+  <li> Methods with @Override annotation. </li>
+  <li> Empty constructors. </li>
+  <li> Static constants. </li>
+</ul>
+<h2>Code Example</h2>
+<pre>
+public interface ISysHead extends IBean{// Noncompliant 
+	 void setSeqNo(String seqNo);// Noncompliant
+	 protected void doSomething() {    // Noncompliant
+	 //TODO
+	 }
+    
+     public Project initializeProject(final String projectKey) throws ReportException { // Noncompliant
+     //TODO
+     }
+	 
+	 private void doSomething() {    // Noncompliant
+	 //TODO
+	 }
+	 
+	 @Override
+	 public void run() {             // Compliant - has @Override annotation
+	 }
+
+}   
+
+
+public abstract class Employee
+{
+	 public abstract void cry() { // Noncompliant	 
+	 //TODO		 
+	 }
+	 
+	 public void run() {                // Compliant - not abstract
+	 }
+	 protected void doSomething() {    // Compliant - not abstract
+	 }
+	 
+	 private void doSomething() {    // Compliant - not abstract
+	 }
+	
+}
+
+
+
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+/**
+* This is a Javadoc comment
+*/
+public interface ISysHead extends IBean{ //Compliant 
+     /**
+     * This is a Javadoc comment
+     */
+	 void setSeqNo(String seqNo);// Noncompliant
+     
+     /**
+     * Initialize: 
+     * 
+     * @param projectKey
+     *            projectKey
+     * 
+     * @throws ReportException
+     *             ReportException
+     * @return Project
+     * @author liujiey
+     */
+    
+    public Project initializeProject(final String projectKey) throws ReportException {    
+    //TODO
+    }
+     /**
+     * This is a Javadoc comment
+     */
+	private void doSomething() {    // Noncompliant
+	//TODO
+	}
+}   
+
+
+public abstract class Employee
+{
+  /**
+  * This is a Javadoc comment
+  * @author liujiey
+  */
+	 public abstract void cry() { // Noncompliant
+	 //TODO 
+	 }
+	
+}
+
+</pre>

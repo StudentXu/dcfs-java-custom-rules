@@ -1,0 +1,14 @@
+{
+  "title": "teller9-违规使用平台内部的执行缓存",
+  "type": "BUG",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "cache",
+    "teller9"
+  ],
+  "defaultSeverity": "Blocker"
+}

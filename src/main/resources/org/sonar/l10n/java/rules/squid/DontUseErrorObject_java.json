@@ -1,0 +1,15 @@
+{
+  "title": "teller8-不允许使用的对象",
+  "type": "BUG",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "cache",
+    "multi-threading",
+    "teller8"
+  ],
+  "defaultSeverity": "Major"
+}

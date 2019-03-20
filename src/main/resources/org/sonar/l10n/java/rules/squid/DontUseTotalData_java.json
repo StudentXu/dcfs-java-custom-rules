@@ -1,0 +1,14 @@
+{
+  "title": "teller9-用全量数据更新交易数据",
+  "type": "BUG",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "30min"
+  },
+  "tags": [
+    "cache",
+    "teller9"
+  ],
+  "defaultSeverity": "Critical"
+}

@@ -1,0 +1,13 @@
+{
+  "title": "DCITS Public types, methods and fields (API) should be documented with Javadoc(must contain @author),",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "10min"
+  },
+  "tags": [
+    "convention"
+  ],
+  "defaultSeverity": "Major"
+}

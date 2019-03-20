@@ -1,0 +1,12 @@
+<p>重复取值3</p>
+<h2>Code Example</h2>
+<pre>
+重复取值3
+String phone = datamodel.getControlValueString("COMMISSION_TEL_NO")==null ? "" : datamodel.getControlValueString("COMMISSION_TEL_NO");
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+推荐使用方式
+String conStr = datamodel.getControlValueString("COMMISSION_TEL_NO");
+conStr = conStr == null ? "" : conStr;
+</pre>

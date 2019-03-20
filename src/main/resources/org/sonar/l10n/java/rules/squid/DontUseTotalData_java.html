@@ -1,0 +1,21 @@
+<p>不能使用全量数据更新交易数据</p>
+<h2>Code Example</h2>
+<pre>
+用交易的全量数据更新交易数据
+CompositeData add  = (CompositeData)datamodel.getRequestAtomData();
+String date = DataUtils.getCalToShortStr();
+String date1 = DataUtils.getCurryLongTime();
+add.addField("DATE", DataFactory.getField(date));
+add.addField("DATE1", DataFactory.getField(date1));
+datamodel.updateAtomData(add);
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+推荐使用方式：
+CompositeData add  = DataFactory.getCompositeData();
+String date = DataUtils.getCalToShortStr();
+String date1 = DataUtils.getCurryLongTime();
+add.addField("DATE", DataFactory.getField(date));
+add.addField("DATE1", DataFactory.getField(date1));
+datamodel.updateAtomData(add);
+</pre>

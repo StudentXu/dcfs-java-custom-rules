@@ -1,0 +1,14 @@
+{
+  "title": "teller9-重复取值3",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "performance",
+    "teller9"
+  ],
+  "defaultSeverity": "Major"
+}

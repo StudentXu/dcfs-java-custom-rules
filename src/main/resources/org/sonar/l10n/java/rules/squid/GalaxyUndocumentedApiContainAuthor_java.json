@@ -1,0 +1,13 @@
+{
+  "title": "DCITS Galaxy interface, interface's methods and abstract methods should be documented with Javadoc(must contain @author)",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "10min"
+  },
+  "tags": [
+    "convention"
+  ],
+  "defaultSeverity": "Major"
+}

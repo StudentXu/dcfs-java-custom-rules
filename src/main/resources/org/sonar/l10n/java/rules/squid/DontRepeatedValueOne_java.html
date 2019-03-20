@@ -1,0 +1,16 @@
+<p>重复取值场景1</p>
+<h2>Code Example</h2>
+<pre>
+重复取值场景1
+if(null==datamodel.getControlValueString("EFFECT_DATE")||datamodel.getControlValueString("EFFECT_DATE").equals("")){
+	return;
+}
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+推荐使用方式
+String value = datamodel.getControlValueString("EFFECT_DATE");
+if (value == null || "".equals(value)) {
+	return;
+}
+</pre>

@@ -1,0 +1,14 @@
+{
+  "title": "teller9-多余的contains判断",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "10min"
+  },
+  "tags": [
+    "performance",
+    "teller9"
+  ],
+  "defaultSeverity": "Major"
+}

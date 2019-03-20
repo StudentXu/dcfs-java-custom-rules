@@ -1,0 +1,12 @@
+<p>不允许使用的对象</p>
+<h2>Code Example</h2>
+<pre>
+不允许使用的对象
+例1
+private Socket client;		                //错误写法
+private HttpClient  httpclient;				//错误写法
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+为了防止多线程时，出现内存溢出问题，不允许使用以下私有全局对象
+</pre>
